@@ -1,0 +1,67 @@
+.header_row {
+  display: flex;
+  padding: 30px 0px;
+  justify-content: space-between;
+}
+.header_left_row span {
+  margin-left: 10px;
+  align-items: center;
+}
+.header_right_row {
+  display: flex;
+  align-items: center;
+}
+
+.logo_icon {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.bankName {
+  opacity: 0.9;
+  font-size: 1.1em;
+}
+.notification_icon,
+.email_icon,
+.menu_icon {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.email_icon {
+  background-color: white;
+}
+.notification_icon {
+  margin: 0px 20px;
+}
+.menu_icon {
+  width: 25px;
+  height: 25px;
+}
+.dropdown_icon {
+  width: 15px;
+  height: 15px;
+  margin-left: 6px;
+  border-radius: 3px;
+  background-color: whitesmoke;
+}
+.profile_section {
+  display: none;
+}
+.profile_section span {
+  font-size: 1em;
+}
+
+@media only screen and (min-width: 768px) {
+  .profile_section {
+    display: block;
+    margin-left: 30px;
+  }
+  .menu_icon {
+    display: none;
+  }
+}

@@ -1,0 +1,84 @@
+.main {
+  display: flex;
+  padding: 15px 35px;
+  align-items: center;
+  justify-content: space-between;
+}
+.payment_container {
+  opacity: 0.9;
+  font-size: 1.3em;
+}
+.payment_container img {
+  width: 14px;
+  height: 14px;
+  margin-left: 8px;
+}
+.payment_heading {
+  font-weight: bold;
+  margin-right: 8px;
+}
+.last_week {
+  color: #0bc4b3;
+  font-weight: bold;
+}
+.filter_container {
+  opacity: 0.9;
+  font-size: 1.1em;
+}
+.filter_container img {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+}
+.income_outcome_container {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .main {
+    background-color: #f3f3f3;
+  }
+  .filter_container {
+    display: none;
+  }
+  .payment_container {
+    font-size: 1.5em;
+  }
+  .income_outcome_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+  }
+  .income_container,
+  .outcome_container {
+    display: flex;
+    flex-direction: column;
+  }
+  .income_heading,
+  .outcome_heading {
+    opacity: 0.8;
+    font-weight: bold;
+  }
+  .income_amount {
+    color: #0bc4b3;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+  .outcome_amount {
+    color: #e2595f;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+  .analytics_container {
+    margin-right: 5px;
+  }
+  .analytics_container img {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+  }
+  .analytics_container span {
+    font-weight: bold;
+    opacity: 0.6;
+  }
+}

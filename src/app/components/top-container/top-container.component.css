@@ -1,0 +1,13 @@
+.main_container {
+  padding: 0px 35px;
+  background-image: url("../../../assets/background-mobile.jpg");
+  display: grid;
+  grid-template-columns: 1fr;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media only screen and (min-width: 768px) {
+  .main_container {
+    background-image: url("../../../assets/background-desktop.jpg");
+  }
+}

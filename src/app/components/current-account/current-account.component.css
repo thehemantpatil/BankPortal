@@ -1,0 +1,189 @@
+.main {
+  padding: 10px 0px 0px;
+}
+
+.heading span {
+  font-size: 1em;
+  opacity: 1;
+}
+
+.after_decimal_value {
+  font-size: 0.7em;
+  margin-left: 3px;
+}
+.current_account_container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.amount_container {
+  font-size: 2.5em;
+  word-spacing: 2px;
+  margin-top: -6px;
+}
+.payment_btn_row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 20px;
+}
+.payment_btn,
+.requisites_btn {
+  display: flex;
+  padding: 12px 0px;
+  align-items: center;
+  border-radius: 8px;
+  justify-content: center;
+  background-image: linear-gradient(to right, #0bc4b3, #20cca0, #29d591);
+  cursor: pointer;
+}
+
+.payment_btn span {
+  opacity: 1;
+}
+.requisites_btn {
+  background-image: linear-gradient(to right, #446655, #537161, #455a51);
+
+  width: 85%;
+  justify-self: flex-end;
+}
+.requisites_btn span {
+  opacity: 1;
+}
+.footer_container {
+  margin: 50px -35px 0px;
+  padding: 20px 35px;
+  display: flex;
+  border-top: 1px dotted white;
+  justify-content: space-between;
+}
+.task_container {
+  display: flex;
+  align-items: center;
+}
+.task_container:nth-child(1) {
+  font-weight: bold;
+}
+.task_count_container {
+  background-color: #e2595f;
+  display: flex;
+  width: 20px;
+  height: 20px;
+  font-size: 1em;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  margin-left: 10px;
+  padding-bottom: 2px;
+  font-weight: normal;
+}
+.analytics_container {
+  display: flex;
+  align-items: center;
+}
+.analytics_container img {
+  width: 25px;
+  height: 25px;
+  background-color: gray;
+  margin-right: 10px;
+}
+.analytics_container span {
+  color: #a8b4b4;
+}
+.task_container_desktop {
+  display: none;
+}
+
+/* task_container_desktop */
+.task_container_desktop:hover {
+  background-image: linear-gradient(to right, #3d5046, #354b3f, #2e4239);
+  transition: all 0.3 ease;
+}
+
+/* hover buttons */
+.payment_btn:hover {
+  background-image: linear-gradient(to right, #0bc4b3, #42e4bb, #29d591);
+  transition: all 0.3 ease;
+}
+.requisites_btn:hover {
+  background-image: linear-gradient(to right, #3d5046, #354b3f, #2e4239);
+  transition: all 0.3 ease;
+}
+.task_container_desktop {
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  .main {
+    padding-top: 0px;
+  }
+  .analytics_container {
+    display: none;
+  }
+  .footer_container {
+    display: none;
+  }
+
+  .current_account_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    padding-bottom: 28px;
+  }
+  .amount_payment_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column: 1/3;
+    align-self: center;
+  }
+  .amount_container {
+    font-size: 1.8em;
+    word-spacing: 2px;
+    margin-top: 0px;
+    grid-column: 1/2;
+    width: 90%;
+  }
+  .payment_btn_row {
+    padding-top: 0px;
+    grid-column: 2/4;
+    width: 90%;
+    align-self: center;
+  }
+
+  .task_container_desktop {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    border-radius: 8px;
+    background-image: linear-gradient(to right, #446655, #537161, #7e8a85);
+    justify-self: flex-end;
+  }
+  .red_dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: #e2595f;
+  }
+  .total_task {
+    font-weight: bold;
+    margin: 0px 5px;
+  }
+  .task_desc {
+    opacity: 0.7;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .amount_container {
+    font-size: 2em;
+    word-spacing: 2px;
+  }
+  .payment_btn_row {
+    margin-left: 0%;
+  }
+  .payment_btn,
+  .requisites_btn {
+    padding: 5px 0px;
+    height: 40px;
+  }
+  .task_container_desktop {
+    padding: 8px 25px;
+  }
+}

@@ -1,0 +1,81 @@
+<div class="main">
+  <div class="search_row">
+    <div class="payment_types_row">
+      <div class="all">
+        <span> All 145 </span>
+      </div>
+      <div class="income">
+        <div></div>
+        <span> Income 95 </span>
+      </div>
+      <div class="outcome">
+        <div></div>
+        <span> Outcome 44 </span>
+      </div>
+      <div class="signature">
+        <div></div>
+        <span> For Signature 1 </span>
+      </div>
+    </div>
+    <div class="search_container">
+      <img src="../../../assets/search-icon.png" alt="" />
+      <input
+        [(ngModel)]="searchValue"
+        (keyup)="searchPayment()"
+        type="text"
+        placeholder="search"
+      />
+    </div>
+  </div>
+  <div class="payment_list">
+    <span class="day_name">Today, monday</span>
+  </div>
+  <div *ngFor="let payment of paymentList" class="payment_row">
+    <div class="payment_info">
+      <span class="title">
+        {{ payment.category }}
+      </span>
+      <span
+        [style.color]="
+          payment.transactionType == 'debit' ? '#e2595f' : '#29d591'
+        "
+        class="outcome_amount_column"
+      >
+        - $ {{ payment.amount }}
+      </span>
+      <span class="desc">
+        {{ payment.description }}
+      </span>
+    </div>
+    <div class="payment_row_right_section">
+      <span
+        [style.color]="
+          payment.transactionType == 'debit' ? '#e2595f' : '#29d591'
+        "
+        class="outcome_amount_row"
+      >
+        {{ payment.transactionType == "debit" ? "-" : "+" }} $
+        {{ payment.amount }}
+      </span>
+      <div *ngIf="payment.sign == 'true'" class="payment_tag_sign">
+        <span class="text-white">Sign</span>
+      </div>
+      <div
+        *ngIf="payment.transactionType == 'credit' && payment.sign != 'true'"
+        class="payment_tag_income"
+      >
+        <span>income</span>
+      </div>
+      <div
+        *ngIf="payment.transactionType == 'debit' && payment.sign != 'true'"
+        class="payment_tag_outcome"
+      >
+        <span>outcome</span>
+      </div>
+      <div class="more_container">
+        <span>More</span>
+        <img src="../../../assets/icons8-down-arrow-64.png" alt="" />
+      </div>
+    </div>
+  </div>
+</div>
